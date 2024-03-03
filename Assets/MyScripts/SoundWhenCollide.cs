@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SoundWhenCollide : MonoBehaviour
+{
+    public AudioClip sound;
+    // Start is called before the first frame update
+    void Start()
+    {
+        GetComponent<AudioSource>().clip = sound;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    void OnCollisionEnter()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+}
